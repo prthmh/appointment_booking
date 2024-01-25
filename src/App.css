@@ -2,13 +2,19 @@
   --d-green: #378760;
   --l-green: #cce7e0;
   --text-color: #090f4e;
+  --text-color-2: #28293d;
+  --text-color-3: #555770;
+  --text-color-4: #333333;
+  --bg-1: #ebebf0;
+  --bg-2: #f2f2f5;
+  --bg-3: #fafafc;
+  --border-color: #c7c9d9;
 }
 
 .app {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 95vh;
+  gap: 4rem;
 }
 
 .b_comp {
