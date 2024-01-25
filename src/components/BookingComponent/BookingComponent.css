@@ -1,0 +1,19 @@
+.booking {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-template-areas:
+    "calender slot"
+    "bookingfooter bookinfooter";
+}
+
+.calender {
+  grid-area: calender;
+}
+
+.slots {
+  grid-area: slot;
+}
+
+.booking_footer {
+  grid-area: bookingfooter;
+}

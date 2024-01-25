@@ -1,0 +1,18 @@
+* {
+  --d-green: #378760;
+  --l-green: #cce7e0;
+  --text-color: #090f4e;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95vh;
+}
+
+.b_comp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

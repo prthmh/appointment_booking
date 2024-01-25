@@ -1,10 +1,15 @@
 import "./App.css";
+import BookingComponent from "./components/BookingComponent/BookingComponent";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
-    <>
-      <h1>Hi</h1>
-    </>
+    <div className="app">
+      <Header />
+      <div className="b_comp">
+        <BookingComponent />
+      </div>
+    </div>
   );
 }
 
