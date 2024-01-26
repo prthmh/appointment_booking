@@ -32,7 +32,7 @@
 
 .varient_dropdown,
 .varient_dropdown > option {
-  font-style: inherit;
+  font-family: inherit;
   font-size: 15px;
   font-weight: 600;
   line-height: 21px;
@@ -75,7 +75,7 @@
   padding: 10px;
 }
 
-.time_slots {
+.time_slot {
   display: flex;
   padding: 8px 12px;
   justify-content: center;
@@ -89,6 +89,18 @@
   font-style: normal;
   font-weight: 600;
   line-height: 21px;
+  cursor: pointer;
+}
+
+.selected_time_slot {
+  background-color: var(--d-green);
+  color: #fff;
+  justify-content: space-between;
+}
+
+.checkmark_icon {
+  display: flex;
+  align-items: center;
 }
 
 .slot_list::-webkit-scrollbar {

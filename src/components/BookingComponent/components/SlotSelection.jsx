@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { IoCheckmarkCircleOutline } from "react-icons/io5";
+import { FaRegCircleCheck } from "react-icons/fa6";
 
 import "./SlotSelection.css";
 import { useData } from "../../../context/CalenderContext";
@@ -9,7 +9,8 @@ import { getDatesForAPIcall } from "../../../utils/getDatesForAPIcall";
 import { getTime } from "../../../utils/getTime";
 
 const SlotSelection = () => {
-  const { selectedDate } = useData();
+  const { selectedDate, selectedSlot, slotSelction, onDurationSelection } =
+    useData();
   const [currSlots, setCurrSlots] = useState([]);
 
   useEffect(() => {
@@ -30,18 +31,27 @@ const SlotSelection = () => {
       return;
     }
   }, [selectedDate]);
-  console.log(currSlots);
+
+  const isSlotSelected = (slot) => {
+    return Boolean(
+      getTime(selectedSlot?.time?.start_time) === getTime(slot.start_time)
+    );
+  };
+  console.log(selectedSlot);
 
   return (
     <div className="slot_section">
       <div className="varients">
         <div>SELECT FROM VARIENTS</div>
-        <select className="varient_dropdown">
+        <select
+          className="varient_dropdown"
+          onChange={(e) => onDurationSelection(e.target.value)}
+        >
           <option>Please Select Time period</option>
-          <option>15 min</option>
-          <option>30 min</option>
-          <option>60 min</option>
-          <option>90 min</option>
+          <option value="15 min">15 min</option>
+          <option value="30 min">30 min</option>
+          <option value="60 min">60 min</option>
+          <option value="90 min">90 min</option>
         </select>
       </div>
       <hr />
@@ -55,8 +65,23 @@ const SlotSelection = () => {
             </div>
             <div className="slot_list">
               {currSlots.map((slot, index) => (
-                <div className="time_slots" key={index}>
-                  {getTime(slot.start_time)} - {getTime(slot.end_time)}
+                <div
+                  className={
+                    isSlotSelected(slot)
+                      ? "time_slot selected_time_slot"
+                      : "time_slot"
+                  }
+                  key={index}
+                  onClick={() => slotSelction(slot)}
+                >
+                  <span>
+                    {getTime(slot.start_time)} - {getTime(slot.end_time)}
+                  </span>
+                  {isSlotSelected(slot) && (
+                    <span className="checkmark_icon">
+                      <FaRegCircleCheck />
+                    </span>
+                  )}
                 </div>
               ))}
             </div>

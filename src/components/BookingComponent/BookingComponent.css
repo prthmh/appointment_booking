@@ -1,9 +1,9 @@
 .booking {
   display: grid;
-  grid-template-columns: 484px 484px;
+  grid-template-columns: 464px 464px;
   grid-template-areas:
     "calender slot"
-    "bookingfooter bookinfooter";
+    "bookingfooter bookingfooter";
 }
 
 .calender {
@@ -20,4 +20,53 @@
 
 .booking_footer {
   grid-area: bookingfooter;
+  display: flex;
+  padding: 15px 30px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--d-green);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.poweredby {
+  color: #fff;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.next_btn {
+  display: flex;
+  /* height: 48px; */
+  padding: 8px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--d-green);
+  background: #fff;
+  color: var(--d-green);
+}
+
+#next {
+  color: var(--text-color-3);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+#appointo {
+  text-decoration-line: underline;
+}
+
+.next_icon {
+  color: var(--d-green);
+  display: flex;
+  align-items: center;
+  font-size: 15px;
 }
