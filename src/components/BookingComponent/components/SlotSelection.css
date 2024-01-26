@@ -1,0 +1,105 @@
+.slot_section {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 20px;
+}
+
+.varients {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  align-self: stretch;
+}
+
+.varients > div {
+  color: var(--text-color-3);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+}
+.varient_dropdown {
+  color: var(--d-green);
+  background-color: var(--bg-3);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  height: 48px;
+  width: 100%;
+  padding: 8px 12px;
+}
+
+.varient_dropdown,
+.varient_dropdown > option {
+  font-style: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.varient_dropdown > option :hover {
+  background-color: var(--l-green);
+}
+
+.slot_section > hr {
+  stroke-width: 1px;
+  stroke: var(--border-color, #c7c9d9);
+}
+
+.no_of_slots {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  align-self: stretch;
+  height: 264px;
+}
+
+.no_of_slots > div {
+  color: var(--text-color-3);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
+.slot_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  align-self: stretch;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.time_slots {
+  display: flex;
+  padding: 8px 12px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 10px;
+  border: 1px solid var(--d-green, #378760);
+  background: #fff;
+  color: var(--d-green, #378760);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.slot_list::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+.slot_list::-webkit-scrollbar-track {
+  background: var(--l-green); /* color of the tracking area */
+}
+
+.slot_list::-webkit-scrollbar-thumb {
+  background-color: var(--d-green); /* color of the scroll thumb */
+  border-radius: 20px; /*roundness of the scroll thumb */
+}

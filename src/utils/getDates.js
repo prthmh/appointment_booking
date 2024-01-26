@@ -1,10 +1,6 @@
 export const generateDate = (month, year) => {
-  const firstDateOfMonth = new Date(year, month, 1, 7);
-  const lastDateOfMonth = new Date(year, month, getDaysInMonth(month), 7);
-  // console.log(month, year);
-  // console.log(firstDateOfMonth.getDay())
-  // console.log(lastDateOfMonth)
-  // console.log(month, year);
+  const firstDateOfMonth = new Date(year, month, 1);
+  const lastDateOfMonth = new Date(year, month, getDaysInMonth(month, year));
 
   const arrayOfDates = [];
 
@@ -12,13 +8,13 @@ export const generateDate = (month, year) => {
   const previousYear = previousMonth === 11 ? year - 1 : year;
   const firstDayOfMonth = firstDateOfMonth.getDay();
   const lastDateOfLastMonth = new Date(year, month, 0).getDate();
-  // console.log(lastDateOfLastMonth);
 
   //prefix
   for (let i = firstDayOfMonth; i > 0; i--) {
-    arrayOfDates.push(
-      new Date(previousYear, previousMonth, lastDateOfLastMonth - i + 1, 7)
-    );
+    arrayOfDates.push({
+      date: new Date(previousYear, previousMonth, lastDateOfLastMonth - i + 1),
+      currentMonth: false,
+    });
   }
 
   //curr month
@@ -27,18 +23,18 @@ export const generateDate = (month, year) => {
     i <= lastDateOfMonth.getDate();
     i++
   ) {
-    arrayOfDates.push(new Date(year, month, i, 7));
+    arrayOfDates.push({ date: new Date(year, month, i), currentMonth: true });
   }
 
   //suffixx
   const remainingDates = 42 - arrayOfDates.length;
-  //   console.log(remainingDates);
   for (let i = 1; i < remainingDates + 1; i++) {
-    // console.log(i, new Date(year, month + 1, i + 1, 7));
-    arrayOfDates.push(new Date(year, month + 1, i));
+    arrayOfDates.push({
+      date: new Date(year, month + 1, i),
+      currentMonth: false,
+    });
   }
 
-  //   console.log(arrayOfDates);
   return arrayOfDates;
 };
 
@@ -58,11 +54,10 @@ function getDaysInMonth(month, year) {
     case 10: // November
       return 30;
     case 1: // February
-      // Check for leap year
       if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
-        return 29; // Leap year, February has 29 days
+        return 29;
       } else {
-        return 28; // Non-leap year, February has 28 days
+        return 28;
       }
     default:
       throw new Error(
