@@ -6,11 +6,16 @@ export const DataProvider = ({ children }) => {
   const [selectedDate, setSelectedDate] = useState();
   const [selectedSlot, setSelectedSlot] = useState({
     time: null,
-    duration: null,
+    duration: "",
   });
+  const [isLoading, setLoading] = useState(false);
 
   const onDateChange = (date) => {
     setSelectedDate(date);
+    setSelectedSlot({
+      time: null,
+      duration: "",
+    });
   };
 
   const slotSelction = (slot) => {
@@ -28,8 +33,11 @@ export const DataProvider = ({ children }) => {
         setSelectedDate,
         onDateChange,
         selectedSlot,
+        setSelectedSlot,
         slotSelction,
         onDurationSelection,
+        isLoading,
+        setLoading,
       }}
     >
       {children}

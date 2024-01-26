@@ -50,6 +50,7 @@
   border: 1px solid var(--d-green);
   background: #fff;
   color: var(--d-green);
+  cursor: pointer;
 }
 
 #next {

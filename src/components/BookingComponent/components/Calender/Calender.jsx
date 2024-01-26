@@ -3,14 +3,15 @@ import { IoChevronForward } from "react-icons/io5";
 import { IoChevronBack } from "react-icons/io5";
 
 import "./Calender.css";
-import { months, weekdays } from "../../../utils/constants";
-import { generateDate } from "../../../utils/getDates";
-import { useData } from "../../../context/CalenderContext";
+import { months, weekdays } from "../../../../utils/constants";
+import { generateDate } from "../../../../utils/getDates";
+import { useData } from "../../../../context/CalenderContext";
 
 const newD = new Date();
 const Calender = () => {
   const [currMonthAndYear, setCurrMonthAndYear] = useState(newD);
-  const { selectedDate, onDateChange } = useData();
+  const { selectedDate, onDateChange, setSelectedDate, setSelectedSlot } =
+    useData();
 
   const dates = generateDate(
     currMonthAndYear.getMonth(),
@@ -24,6 +25,11 @@ const Calender = () => {
     const year = nextMonth === 0 ? presentYear + 1 : presentYear;
     const newDate = new Date(year, nextMonth);
     setCurrMonthAndYear(newDate);
+    setSelectedDate();
+    setSelectedSlot({
+      time: null,
+      duration: "",
+    });
   };
 
   const onPrevMonth = () => {
@@ -33,6 +39,11 @@ const Calender = () => {
     const year = prevMonth === 11 ? presentYear - 1 : presentYear;
     const newDate = new Date(year, prevMonth);
     setCurrMonthAndYear(newDate);
+    setSelectedDate();
+    setSelectedSlot({
+      time: null,
+      duration: "",
+    });
   };
 
   const onDateSelection = (date) => {
