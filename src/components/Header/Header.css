@@ -13,9 +13,45 @@
 
 .header_option {
   display: flex;
+  align-items: center;
   gap: 20px;
   font-size: 18px;
   color: var(--text-color);
   font-weight: 500;
-  line-height: 27px;
+  line-height: normal;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.down_icon {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: var(--d-green);
+}
+
+.share {
+  display: flex;
+  padding: 8px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 40px;
+  border: 1.6px solid var(--d-green);
+  color: var(--d-green);
+}
+
+.share_icon {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+#share_text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
 }

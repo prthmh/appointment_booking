@@ -14,6 +14,9 @@ function App() {
           <BookingComponent />
         </div>
       </div>
+      <span className="left_band"></span>
+      <span className="right_band-1"></span>
+      <span className="right_band-2"></span>
     </DataProvider>
   );
 }

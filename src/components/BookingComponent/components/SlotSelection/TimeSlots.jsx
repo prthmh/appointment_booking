@@ -4,6 +4,7 @@ import { FaRegCircleCheck } from "react-icons/fa6";
 import "./SlotSelection.css";
 import { fullWeekdays, shortMonths } from "../../../../utils/constants";
 import { getTime } from "../../../../utils/getTime";
+import Loader from "../../../Loader/Loader";
 
 const TimeSlots = ({
   selectedDate,
@@ -17,7 +18,7 @@ const TimeSlots = ({
       {" "}
       {selectedDate ? (
         isLoading ? (
-          <>Loading....</>
+          <Loader />
         ) : (
           <>
             <div>

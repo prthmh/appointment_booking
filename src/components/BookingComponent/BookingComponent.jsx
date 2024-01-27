@@ -15,7 +15,7 @@ const BookingComponent = () => {
   const onNextClick = () => {
     if (selectedSlot.time && selectedSlot.duration) {
       toast.success(
-        `Appointment Booked for - ${getAppointmentString(
+        `Appointment Booked for ${getAppointmentString(
           selectedSlot,
           selectedDate
         )}`,

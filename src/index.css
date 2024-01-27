@@ -5,6 +5,23 @@
   margin: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Poppins", sans-serif;
+}
+
+html::-webkit-scrollbar {
+  width: 0.6vw;
+}
+
+html::-webkit-scrollbar-track {
+  background: white;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(55, 135, 96, 0.7);
+  border-radius: 20px;
 }

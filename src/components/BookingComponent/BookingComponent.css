@@ -12,6 +12,7 @@
 
 .slots {
   grid-area: slot;
+  background-color: #fff;
 }
 .calender,
 .slots {
