@@ -15,7 +15,7 @@ const BookingComponent = () => {
   const onNextClick = () => {
     if (selectedSlot.time && selectedSlot.duration) {
       toast.success(
-        `Appointment Booked for ${getAppointmentString(
+        `You selected appointment for ${getAppointmentString(
           selectedSlot,
           selectedDate
         )}`,
@@ -37,7 +37,7 @@ const BookingComponent = () => {
       });
     } else {
       if (!selectedSlot.time) {
-        toast.error("Time not selected", {
+        toast.error("Time slot not selected", {
           duration: 5000,
           position: "top-center",
           style: {
