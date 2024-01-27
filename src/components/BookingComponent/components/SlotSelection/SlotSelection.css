@@ -28,6 +28,7 @@
   height: 48px;
   width: 100%;
   padding: 8px 12px;
+  cursor: pointer;
 }
 
 .varient_dropdown,
@@ -36,10 +37,6 @@
   font-size: 15px;
   font-weight: 600;
   line-height: 21px;
-}
-
-.varient_dropdown > option :hover {
-  background-color: var(--l-green);
 }
 
 .slot_section > hr {
@@ -97,6 +94,12 @@
   color: #fff;
   justify-content: space-between;
 }
+.time_slot:hover {
+  background-color: var(--l-green);
+}
+.selected_time_slot:hover {
+  background-color: var(--d-green);
+}
 
 .checkmark_icon {
   display: flex;
@@ -114,4 +117,47 @@
 .slot_list::-webkit-scrollbar-thumb {
   background-color: var(--d-green); /* color of the scroll thumb */
   border-radius: 20px; /*roundness of the scroll thumb */
+}
+
+@media (max-width: 950px) {
+  .no_of_slots {
+    height: 230px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slot_section {
+    padding: 28px;
+  }
+
+  .varient_dropdown {
+    height: 40px;
+    padding: 5px 8px;
+  }
+
+  .varient_dropdown,
+  .varient_dropdown > option {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .varients > div {
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  .no_of_slots {
+    height: 210px;
+  }
+
+  .no_of_slots > div {
+    font-size: 11px;
+    line-height: 18px;
+  }
+
+  .time_slot {
+    padding: 6px 10px;
+    font-size: 12px;
+    line-height: 18px;
+  }
 }

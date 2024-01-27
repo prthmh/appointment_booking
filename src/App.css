@@ -16,6 +16,7 @@
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 5rem;
+  position: relative;
 }
 
 .b_comp {
@@ -29,7 +30,7 @@
   width: 420px;
   height: 60px;
   background-color: var(--l-green);
-  bottom: -48px;
+  bottom: -82px;
   z-index: -10;
   transform: skew(-6deg) rotate(-7deg);
 }
@@ -40,7 +41,7 @@
   width: 612px;
   height: 60px;
   transform: skew(-6deg) rotate(-7deg);
-  bottom: 81px;
+  bottom: 58px;
   right: -2px;
   z-index: -10;
 }
@@ -50,7 +51,29 @@
   width: 250px;
   height: 60px;
   transform: skew(-6deg) rotate(-7deg);
-  bottom: 162px;
+  bottom: 139px;
   right: -2px;
   z-index: -10;
+}
+
+@media (max-width: 920px) {
+  .left_band {
+    width: 300px;
+    bottom: -60px;
+  }
+  .right_band-1 {
+    width: 500px;
+  }
+  .right_band-2 {
+    width: 80px;
+    bottom: 143px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left_band,
+  .right_band-1,
+  .right_band-2 {
+    display: none;
+  }
 }

@@ -72,3 +72,44 @@
   align-items: center;
   font-size: 15px;
 }
+
+@media (max-width: 950px) {
+  .booking {
+    grid-template-columns: 364px 364px;
+  }
+  .calender,
+  .slots {
+    height: 430px;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking {
+    grid-template-columns: 294px 294px;
+  }
+  .calender,
+  .slots {
+    height: 370px;
+  }
+  .booking_footer {
+    padding: 10px 25px;
+  }
+  .next_btn {
+    padding: 6px 18px;
+  }
+  .poweredby {
+    font-size: 10px;
+  }
+  #next {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 640px) {
+  .booking {
+    display: flex;
+    flex-direction: column;
+    width: 294px;
+  }
+}

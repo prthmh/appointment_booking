@@ -25,3 +25,10 @@
     transform: rotate(1turn);
   }
 }
+
+@media (max-width: 768px) {
+  .loader::after {
+    width: 60px;
+    height: 60px;
+  }
+}

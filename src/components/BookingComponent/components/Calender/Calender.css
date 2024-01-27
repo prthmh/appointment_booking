@@ -43,7 +43,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 16px;
+  padding: 15px 16px 10px 16px;
 }
 
 .icon {
@@ -51,6 +51,12 @@
   width: 22px;
   height: 22px;
   cursor: pointer;
+  border-radius: 50%;
+  padding: 6px 2px 4px 7px;
+}
+
+.icon:hover {
+  background-color: var(--l-green);
 }
 
 .curr_date {
@@ -89,10 +95,79 @@
   justify-content: center;
   align-items: center;
   align-self: stretch;
+  border-radius: 99px;
+}
+
+.dates:hover {
+  background-color: var(--l-green);
 }
 
 .selected_date {
   background-color: var(--d-green);
   color: white;
-  border-radius: 99px;
+}
+.selected_date:hover {
+  background-color: var(--d-green);
+}
+
+@media (max-width: 950px) {
+  .dates {
+    width: 35px;
+  }
+  .week,
+  .month_dates {
+    grid-template-columns: repeat(7, 38px);
+    column-gap: 1px;
+    row-gap: 10px;
+  }
+  .weekday,
+  .dates {
+    padding: 0;
+  }
+  .cal {
+    height: 265px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calender_comp {
+    padding: 28px;
+  }
+
+  .cal_info > h3 {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .time_zone {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .cal {
+    height: 230px;
+  }
+
+  .dates {
+    width: 30px;
+  }
+
+  .weekday,
+  .dates {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .week,
+  .month_dates {
+    grid-template-columns: repeat(7, 32px);
+  }
+
+  .date_info {
+    padding: 10px 11px 7px 11px;
+  }
+  .curr_date {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }

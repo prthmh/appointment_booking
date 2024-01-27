@@ -56,10 +56,10 @@ const SlotSelection = () => {
           value={selectedSlot?.duration}
         >
           <option value="">Please Select Time period</option>
-          <option value="15 min">15 min</option>
-          <option value="30 min">30 min</option>
-          <option value="60 min">60 min</option>
-          <option value="90 min">90 min</option>
+          <option value="15 mins">15 mins</option>
+          <option value="30 mins">30 mins</option>
+          <option value="60 mins">60 mins</option>
+          <option value="90 mins">90 mins</option>
         </select>
       </div>
       <hr />

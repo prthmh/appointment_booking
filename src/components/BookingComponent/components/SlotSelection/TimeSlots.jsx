@@ -53,7 +53,7 @@ const TimeSlots = ({
       ) : (
         <>
           <h3 style={{ color: "var(--d-green)" }}>
-            Select a Date to see the appointment times
+            Select a date to see the available appointments.
           </h3>
         </>
       )}

@@ -13,10 +13,10 @@ function App() {
         <div className="b_comp">
           <BookingComponent />
         </div>
+        <span className="left_band"></span>
+        <span className="right_band-1"></span>
+        <span className="right_band-2"></span>
       </div>
-      <span className="left_band"></span>
-      <span className="right_band-1"></span>
-      <span className="right_band-2"></span>
     </DataProvider>
   );
 }

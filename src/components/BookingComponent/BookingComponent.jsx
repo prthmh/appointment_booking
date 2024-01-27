@@ -20,7 +20,7 @@ const BookingComponent = () => {
           selectedDate
         )}`,
         {
-          duration: 12000,
+          duration: 9000,
           position: "top-center",
           icon: "🥳",
           style: {
